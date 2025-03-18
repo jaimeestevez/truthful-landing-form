@@ -35,8 +35,8 @@
 
     --radius: 0.5rem;
 
-    --cta: 16 85% 55%;
-    --cta-hover: 16 85% 50%;
+    --cta: 140 90% 56%;
+    --cta-hover: 140 90% 45%;
   }
 
   .dark {
@@ -84,7 +84,7 @@
   }
   
   .btn-cta {
-    @apply bg-[hsl(var(--cta))] hover:bg-[hsl(var(--cta-hover))] text-white font-bold py-4 px-8 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105;
+    @apply bg-[#4BF52A] hover:bg-[#3dd21e] text-[#002129] font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105;
   }
 
   .section-padding {

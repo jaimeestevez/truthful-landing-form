@@ -13,24 +13,24 @@ const CallToAction: React.FC<CallToActionProps> = ({ typeformUrl }) => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white section-padding">
+    <section className="bg-[#002129] text-white section-padding">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center space-y-8">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-[#4BF52A]">
             No Dejes Pasar Esta Oportunidad
           </h2>
-          <p className="text-xl text-blue-100">
+          <p className="text-xl text-white/80">
             Las plazas son limitadas y esta oferta especial estará disponible solo por tiempo limitado
           </p>
           <div className="flex flex-col items-center gap-4">
             <Button 
               onClick={openTypeform}
-              className="btn-cta text-lg group flex items-center gap-2"
+              className="bg-[#4BF52A] hover:bg-[#3dd21e] text-[#002129] text-lg font-bold rounded-full py-6 px-10 group flex items-center gap-2"
             >
-              Quiero Acceder Ahora
+              Acceder
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <p className="text-sm text-blue-200">* Sin compromiso, cancela cuando quieras</p>
+            <p className="text-sm text-white/60">* Sin compromiso, cancela cuando quieras</p>
           </div>
         </div>
       </div>

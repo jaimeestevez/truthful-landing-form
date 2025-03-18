@@ -5,24 +5,30 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-gray-400 py-12">
+    <footer className="bg-[#002129] text-gray-300 py-12">
       <div className="container">
         <div className="text-center md:flex md:justify-between md:items-center">
           <div className="mb-6 md:mb-0">
-            <h3 className="text-2xl font-bold text-white mb-2">TheTruth.es</h3>
-            <p className="text-sm">Descubriendo la verdad que otros quieren ocultar</p>
+            <h3 className="text-2xl font-bold text-[#4BF52A] mb-2">TheTruth.es</h3>
+            <p className="text-sm">Verificación transparente de credenciales académicas</p>
           </div>
           
           <div className="mt-8 md:mt-0">
             <ul className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8 justify-center">
               <li>
-                <a href="#" className="hover:text-white transition-colors">Política de Privacidad</a>
+                <a href="#" className="hover:text-[#4BF52A] transition-colors">¿A quién va dirigido?</a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">Términos de Servicio</a>
+                <a href="#" className="hover:text-[#4BF52A] transition-colors">¿Cómo funciona?</a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">Contacto</a>
+                <a href="#" className="hover:text-[#4BF52A] transition-colors">Quiénes somos</a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#4BF52A] transition-colors">Contacto</a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#4BF52A] transition-colors">Blog</a>
               </li>
             </ul>
           </div>
