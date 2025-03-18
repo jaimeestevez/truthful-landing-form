@@ -1,14 +1,21 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext
+} from "@/components/ui/carousel";
 
 interface HeroProps {
   scrollToVideo: () => void;
 }
 
 const Hero: React.FC<HeroProps> = ({ scrollToVideo }) => {
-  const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   
   const messageSets = [
     {
@@ -48,16 +55,14 @@ const Hero: React.FC<HeroProps> = ({ scrollToVideo }) => {
     }
   ];
 
-  // Cycle through categories every 5 seconds
-  React.useEffect(() => {
+  // Auto cycle through slides
+  useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % messageSets.length);
+      setActiveIndex((prevIndex) => (prevIndex + 1) % messageSets.length);
     }, 5000);
     
     return () => clearInterval(interval);
   }, [messageSets.length]);
-  
-  const currentSet = messageSets[currentMessageIndex];
 
   return (
     <section className="bg-[#002129] text-white min-h-[90vh] flex items-center">
@@ -67,20 +72,62 @@ const Hero: React.FC<HeroProps> = ({ scrollToVideo }) => {
             MEJORA TU EMPLEABILIDAD
           </h1>
           
-          <div className="bg-[#00151b] p-6 rounded-lg border border-[#4BF52A]/30 min-h-[180px] flex flex-col justify-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#4BF52A] mb-4 text-center">
-              {currentSet.title}
-            </h2>
-            <div className="mt-4 space-y-3">
-              {currentSet.messages.map((message, index) => (
-                <p key={index} className="text-lg md:text-xl text-white/90 text-center">
-                  «{message}»
-                </p>
+          <div className="mt-12 relative">
+            <Carousel 
+              className="w-full" 
+              opts={{
+                loop: true,
+                align: "center",
+                startIndex: activeIndex
+              }}
+              setApi={(api) => {
+                api?.on("select", () => {
+                  setActiveIndex(api.selectedScrollSnap());
+                });
+              }}
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {messageSets.map((set, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 w-full">
+                    <div className="bg-[#00151b] p-6 rounded-lg border border-[#4BF52A]/30 min-h-[240px] w-full flex flex-col justify-center">
+                      <h2 className="text-2xl md:text-3xl font-bold text-[#4BF52A] mb-4 text-center">
+                        {set.title}
+                      </h2>
+                      <div className="mt-4 space-y-3">
+                        {set.messages.map((message, msgIndex) => (
+                          <p key={msgIndex} className="text-lg md:text-xl text-white/90 text-center">
+                            «{message}»
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious 
+                className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#002129]/80 hover:bg-[#00151b] border border-[#4BF52A]/40 text-[#4BF52A]" 
+              />
+              <CarouselNext 
+                className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#002129]/80 hover:bg-[#00151b] border border-[#4BF52A]/40 text-[#4BF52A]" 
+              />
+            </Carousel>
+            
+            {/* Carousel indicators */}
+            <div className="flex justify-center gap-2 mt-6">
+              {messageSets.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    activeIndex === index ? 'bg-[#4BF52A]' : 'bg-[#4BF52A]/30'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
               ))}
             </div>
           </div>
           
-          <p className="text-3xl md:text-4xl font-bold text-[#4BF52A] text-center">
+          <p className="text-3xl md:text-4xl font-bold text-[#4BF52A] text-center mt-8">
             The Truth!
           </p>
           
