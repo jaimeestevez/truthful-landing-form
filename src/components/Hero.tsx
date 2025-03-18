@@ -20,13 +20,13 @@ const Hero: React.FC<HeroProps> = ({ scrollToVideo }) => {
             />
           </div>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-[#4BF52A]">
-            CERTAINTY <br/>MADE SIMPLE
+            IDENTIFICACIÓN<br/>ACADÉMICA
           </h1>
           <p className="text-xl md:text-2xl text-white/80 mt-6 max-w-2xl">
-            Conectamos centros formativos, empresas y alumnos a través de una verificación transparente de credenciales académicas, skills y experiencia laboral.
+            Potencia la credibilidad de tu institución con certificados académicos verificables mediante tecnología blockchain.
           </p>
           <p className="text-xl md:text-2xl text-white/90">
-            Si buscas validar la trayectoria educativa con total confianza y eficiencia:
+            Digitaliza tus credenciales académicas y lleva tu centro formativo al siguiente nivel:
           </p>
           <p className="text-3xl md:text-4xl font-bold text-[#4BF52A]">
             The Truth!

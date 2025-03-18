@@ -12,12 +12,11 @@ const VideoSection: React.FC<VideoSectionProps> = ({ videoRef }) => {
       <div className="container">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#4BF52A]">
-            ¿A QUIÉN VA DIRIGIDO?
+            SOLUCIÓN PARA CENTROS FORMATIVOS
           </h2>
           <p className="text-lg text-white/80 text-center mb-12 max-w-3xl mx-auto">
-            Nuestra plataforma basada en blockchain garantiza la integridad y autenticidad de cada certificado. Ya seas
-            centro formativo, empresa o estudiante, descubre cómo gestionar y compartir tus logros académicos y skills con
-            seguridad y transparencia.
+            Nuestra plataforma basada en blockchain garantiza la integridad y autenticidad de cada certificado académico. 
+            Simplifica los procesos administrativos y eleva la credibilidad de tu institución educativa.
           </p>
           <div className="relative pb-[56.25%] h-0 rounded-lg overflow-hidden shadow-2xl">
             {/* Replace this with your actual video embed code */}

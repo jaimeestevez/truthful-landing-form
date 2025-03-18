@@ -17,20 +17,20 @@ const CallToAction: React.FC<CallToActionProps> = ({ typeformUrl }) => {
       <div className="container">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-[#4BF52A]">
-            No Dejes Pasar Esta Oportunidad
+            Transforma Tu Centro Formativo
           </h2>
           <p className="text-xl text-white/80">
-            Las plazas son limitadas y esta oferta especial estará disponible solo por tiempo limitado
+            Únete a las instituciones educativas que ya están revolucionando la forma de verificar y gestionar credenciales académicas
           </p>
           <div className="flex flex-col items-center gap-4">
             <Button 
               onClick={openTypeform}
               className="bg-[#4BF52A] hover:bg-[#3dd21e] text-[#002129] text-lg font-bold rounded-full py-6 px-10 group flex items-center gap-2"
             >
-              Acceder
+              Solicitar Demo
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <p className="text-sm text-white/60">* Sin compromiso, cancela cuando quieras</p>
+            <p className="text-sm text-white/60">* Sin compromiso, plazas limitadas para la demo</p>
           </div>
         </div>
       </div>

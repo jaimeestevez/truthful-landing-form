@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   // Replace this URL with your actual Typeform URL
-  const typeformUrl = "https://thetruth.es";
+  const typeformUrl = "https://thetruth.es/soluciones/centros-formativos/";
   
   const videoRef = useRef<HTMLDivElement>(null);
   
