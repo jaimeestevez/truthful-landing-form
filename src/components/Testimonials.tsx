@@ -9,11 +9,11 @@ const Testimonials = () => {
     },
     {
       name: "ESIC University",
-      logo: "/lovable-uploads/c4221570-4ea7-4544-9020-5fb37be86b81.png"
+      logo: "/lovable-uploads/6299dc4e-03ec-43ae-aec4-2d5be1865c9c.png"
     },
     {
       name: "The New Retail BUSINESS SCHOOL",
-      logo: "/lovable-uploads/f2bd3528-3840-4be0-ac9a-6dbf8483a45f.png"
+      logo: "/lovable-uploads/36a4c743-58ee-48f6-bc31-80401985301d.png"
     },
     {
       name: "PROYECTO REANIMACION",
