@@ -2,11 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import { 
-  Carousel,
-  CarouselContent,
-  CarouselItem
-} from "@/components/ui/carousel";
 
 interface HeroProps {
   scrollToVideo: () => void;
@@ -73,33 +68,48 @@ const Hero: React.FC<HeroProps> = ({ scrollToVideo }) => {
           <div className="mt-12 relative w-full overflow-hidden">
             <div className="carousel-container w-full overflow-hidden">
               <div 
-                className="carousel-track flex transition-transform duration-500 ease-out w-full"
+                className="carousel-track flex transition-transform duration-700 ease-in-out w-full"
                 style={{ transform: `translateX(-${activeIndex * 100}%)` }}
               >
-                {messageSets.map((set, index) => (
-                  <div 
-                    key={index} 
-                    className={`carousel-slide w-full flex-shrink-0 transition-opacity duration-500 px-4
-                      ${index === activeIndex ? 'opacity-100 z-10' : 'opacity-30 blur-[2px]'}`}
-                  >
-                    <div className="bg-[#00151b] p-6 rounded-lg border border-[#4BF52A]/30 min-h-[240px] w-full flex flex-col justify-center">
-                      <h2 className="text-2xl md:text-3xl font-bold text-[#4BF52A] mb-4 text-center">
-                        {set.title}
-                      </h2>
-                      <div className="mt-4 space-y-3">
-                        {set.messages.map((message, msgIndex) => (
-                          <p key={msgIndex} className="text-lg md:text-xl text-white/90 text-center">
-                            {message}
-                          </p>
-                        ))}
+                {messageSets.map((set, index) => {
+                  // Calculate relative position from active slide
+                  const position = index - activeIndex;
+                  // Determine visibility classes based on position
+                  const opacityClass = position === 0 ? 'opacity-100' : 
+                                      Math.abs(position) === 1 ? 'opacity-40' : 'opacity-20';
+                  const blurClass = position === 0 ? '' : 
+                                   Math.abs(position) === 1 ? 'blur-[1px]' : 'blur-[2px]';
+                  const scaleClass = position === 0 ? 'scale-100' : 
+                                    Math.abs(position) === 1 ? 'scale-95' : 'scale-90';
+                  
+                  return (
+                    <div 
+                      key={index} 
+                      className={`carousel-slide w-full flex-shrink-0 transition-all duration-500 px-4 ${opacityClass} ${blurClass} ${scaleClass}`}
+                      style={{ 
+                        transform: `perspective(1000px) rotateY(${position * 5}deg)`,
+                        zIndex: position === 0 ? 10 : 5 - Math.abs(position)
+                      }}
+                    >
+                      <div className="bg-[#00151b] p-6 rounded-lg border border-[#4BF52A]/30 min-h-[240px] w-full flex flex-col justify-center">
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#4BF52A] mb-4 text-center">
+                          {set.title}
+                        </h2>
+                        <div className="mt-4 space-y-3">
+                          {set.messages.map((message, msgIndex) => (
+                            <p key={msgIndex} className="text-lg md:text-xl text-white/90 text-center">
+                              {message}
+                            </p>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
             
-            {/* Carousel indicators styled like the example */}
+            {/* Carousel indicators */}
             <div className="flex justify-center gap-4 mt-8">
               {messageSets.map((_, index) => (
                 <button
@@ -116,16 +126,16 @@ const Hero: React.FC<HeroProps> = ({ scrollToVideo }) => {
             </div>
           </div>
           
-          <p className="text-3xl md:text-4xl font-bold text-[#4BF52A] text-center mt-8">
+          <p className="text-3xl md:text-4xl font-bold text-white text-center mt-8">
             The Truth!
           </p>
           
           <div className="pt-4 flex justify-center">
             <Button 
               onClick={scrollToVideo}
-              className="bg-[#002129] hover:bg-[#003640] text-[#4BF52A] border-2 border-[#4BF52A] rounded-full py-6 px-8 font-medium flex items-center gap-2 hover:gap-3 transition-all"
+              className="bg-[#4BF52A] hover:bg-[#3dd21e] text-white text-lg md:text-xl border-0 rounded-full py-8 px-10 font-bold flex items-center gap-3 hover:gap-4 transition-all shadow-lg"
             >
-              Descubre cómo funciona <ArrowRight className="w-5 h-5" />
+              Descubre cómo funciona <ArrowRight className="w-6 h-6" />
             </Button>
           </div>
         </div>

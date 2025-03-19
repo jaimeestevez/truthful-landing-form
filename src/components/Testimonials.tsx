@@ -1,55 +1,40 @@
 
 import React from 'react';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-
-const testimonials = [
-  {
-    name: "Carlos Martínez",
-    position: "Director de Universidad Técnica",
-    testimonial: "The Truth nos permitió digitalizar todos nuestros certificados académicos, lo que ha mejorado considerablemente la credibilidad de nuestra institución.",
-    initials: "CM"
-  },
-  {
-    name: "Laura González",
-    position: "Coordinadora Académica, Instituto Superior",
-    testimonial: "Pudimos reducir nuestros costes administrativos en un 40% y agilizar todos los procesos de verificación de credenciales para nuestros alumnos.",
-    initials: "LG"
-  },
-  {
-    name: "Javier Rodríguez",
-    position: "Director de Escuela de Negocios",
-    testimonial: "La integración de blockchain para nuestros certificados ha elevado el prestigio de nuestra institución y ampliado nuestro alcance internacional.",
-    initials: "JR"
-  }
-];
 
 const Testimonials = () => {
   return (
-    <section className="bg-gray-100 section-padding">
+    <section className="bg-[#002129] text-white py-16 md:py-20">
       <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[#002129]">
-          Lo Que Dicen Nuestros Clientes
+        <h2 className="text-4xl font-bold text-center mb-8 text-[#4BF52A]">
+          NUESTROS CLIENTES
         </h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index} 
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            >
-              <div className="mb-4 flex items-center">
-                <Avatar className="h-12 w-12 mr-4">
-                  <AvatarFallback className="bg-[#002129] text-white">
-                    {testimonial.initials}
-                  </AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">{testimonial.position}</p>
-                </div>
+        
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+            Trabajamos con instituciones educativas a nivel global para digitalizar el proceso de emisión de certificados y desbloquear un nuevo potencial con tecnología que anteriormente era difícil de acceder.
+          </p>
+        </div>
+        
+        {/* Client logos section */}
+        <div className="bg-[#f4f4f4] py-12 rounded-lg">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            {/* This is a placeholder for client logos */}
+            <div className="flex justify-center">
+              <div className="w-48 h-24 bg-white/90 rounded flex items-center justify-center text-[#002129] font-bold">
+                Cliente 1
               </div>
-              <p className="text-gray-700 italic">"{testimonial.testimonial}"</p>
             </div>
-          ))}
+            <div className="flex justify-center">
+              <div className="w-48 h-24 bg-white/90 rounded flex items-center justify-center text-[#002129] font-bold">
+                Cliente 2
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="w-48 h-24 bg-white/90 rounded flex items-center justify-center text-[#002129] font-bold">
+                Cliente 3
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

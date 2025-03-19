@@ -15,8 +15,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ videoRef }) => {
             SOLUCIÓN PARA CENTROS FORMATIVOS
           </h2>
           <p className="text-lg text-white/80 text-center mb-12 max-w-3xl mx-auto">
-            Nuestra plataforma basada en blockchain garantiza la integridad y autenticidad de cada certificado académico. 
-            Simplifica los procesos administrativos y eleva la credibilidad de tu institución educativa.
+            Con The Truth, tus alumnos tendrán certificados digitales seguros e imposibles de falsificar, facilitando que las empresas confíen más rápido en ellos. Simplifica al máximo la gestión administrativa, mejora la reputación de tu centro, y consigue que tus estudiantes tengan más oportunidades laborales desde el primer día.
           </p>
           <div className="relative pb-[56.25%] h-0 rounded-lg overflow-hidden shadow-2xl">
             {/* Replace this with your actual video embed code */}

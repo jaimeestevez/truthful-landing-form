@@ -1,37 +1,37 @@
 
 import React from 'react';
-import { Globe, Clock, Coins, Users, FileCheck, Award } from 'lucide-react';
+import { Briefcase, Clock, Coins, Award, FileCheck, GraduationCap } from 'lucide-react';
 
 const benefits = [
   {
-    title: "Reconocimiento Global",
-    description: "Potencia tus credenciales con tecnología blockchain. ¡Verificables en todo el mundo!",
-    icon: <Globe className="h-8 w-8 text-[#4BF52A]" />
+    title: "Mejora de la Empleabilidad",
+    description: "Potencia las oportunidades laborales de tus estudiantes con credenciales verificadas.",
+    icon: <Briefcase className="h-8 w-8 text-[#4BF52A]" />
   },
   {
     title: "Verificación Instantánea",
-    description: "Simplifica el proceso de verificación para estudiantes egresados y exalumnos.",
+    description: "Simplifica la validación inmediata de certificados para alumnos y empresas.",
     icon: <Clock className="h-8 w-8 text-[#4BF52A]" />
   },
   {
-    title: "Reducción de Costes",
-    description: "Reduce costes administrativos con nuestra plataforma eficiente y operativa.",
+    title: "Reducción de Costes y Tiempos",
+    description: "Optimiza procesos administrativos eliminando tareas manuales innecesarias.",
     icon: <Coins className="h-8 w-8 text-[#4BF52A]" />
   },
   {
-    title: "Participación de Exalumnos",
-    description: "Conecta y potencia tu red de exalumnos con tokenización de credenciales.",
-    icon: <Users className="h-8 w-8 text-[#4BF52A]" />
+    title: "Prestigio y Credibilidad",
+    description: "Refuerza la reputación de tu centro con credenciales digitales seguras y confiables.",
+    icon: <Award className="h-8 w-8 text-[#4BF52A]" />
   },
   {
     title: "Credenciales de Última Generación",
-    description: "Agiliza la digitalización de tus credenciales académicas para asegurar su conformidad.",
+    description: "Agiliza la digitalización segura de tus certificados mediante blockchain.",
     icon: <FileCheck className="h-8 w-8 text-[#4BF52A]" />
   },
   {
-    title: "Credibilidad Mejorada",
-    description: "Eleva tu reputación y prestigio a través de la digitalización de credenciales verificables.",
-    icon: <Award className="h-8 w-8 text-[#4BF52A]" />
+    title: "Participación y Seguimiento de Exalumnos",
+    description: "Conecta y monitoriza tu red de egresados para mejorar continuamente tu oferta formativa.",
+    icon: <GraduationCap className="h-8 w-8 text-[#4BF52A]" />
   }
 ];
 
