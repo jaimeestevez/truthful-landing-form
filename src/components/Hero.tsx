@@ -5,9 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { 
   Carousel,
   CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext
+  CarouselItem
 } from "@/components/ui/carousel";
 
 interface HeroProps {
@@ -104,22 +102,18 @@ const Hero: React.FC<HeroProps> = ({ scrollToVideo }) => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious 
-                className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#002129]/80 hover:bg-[#00151b] border border-[#4BF52A]/40 text-[#4BF52A]" 
-              />
-              <CarouselNext 
-                className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#002129]/80 hover:bg-[#00151b] border border-[#4BF52A]/40 text-[#4BF52A]" 
-              />
             </Carousel>
             
-            {/* Carousel indicators */}
-            <div className="flex justify-center gap-2 mt-6">
+            {/* Carousel indicators styled like the example */}
+            <div className="flex justify-center gap-4 mt-8">
               {messageSets.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    activeIndex === index ? 'bg-[#4BF52A]' : 'bg-[#4BF52A]/30'
+                  className={`h-1.5 transition-all duration-300 ${
+                    activeIndex === index 
+                      ? 'bg-[#4BF52A] w-8' 
+                      : 'bg-[#4BF52A]/40 w-4'
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
