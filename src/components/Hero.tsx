@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToVideo }) => {
     {
       title: "Más fácil conseguir trabajo",
       messages: [
-        "Con TheTruth.es, encontrar trabajo es más fácil.",
+        "Con The Truth, encontrar trabajo es más fácil.",
         "Tus alumnos serán los primeros en destacar frente a las empresas.",
         "Simplifica a tus alumnos demostrar sus habilidades profesionales.",
         "Menos dudas, más contrataciones. Así de simple."
@@ -64,29 +64,24 @@ const Hero: React.FC<HeroProps> = ({ scrollToVideo }) => {
 
   return (
     <section className="bg-[#002129] text-white min-h-[90vh] flex items-center">
-      <div className="container py-20 md:py-32">
+      <div className="container py-20 md:py-32 w-full">
         <div className="max-w-3xl mx-auto space-y-8 fade-in">
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-[#4BF52A] text-center">
             MEJORA TU EMPLEABILIDAD
           </h1>
           
-          <div className="mt-12 relative">
-            <Carousel 
-              className="w-full" 
-              opts={{
-                loop: true,
-                align: "center",
-                startIndex: activeIndex
-              }}
-              setApi={(api) => {
-                api?.on("select", () => {
-                  setActiveIndex(api.selectedScrollSnap());
-                });
-              }}
-            >
-              <CarouselContent className="-ml-2 md:-ml-4">
+          <div className="mt-12 relative w-full overflow-hidden">
+            <div className="carousel-container w-full overflow-hidden">
+              <div 
+                className="carousel-track flex transition-transform duration-500 ease-out w-full"
+                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+              >
                 {messageSets.map((set, index) => (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 w-full">
+                  <div 
+                    key={index} 
+                    className={`carousel-slide w-full flex-shrink-0 transition-opacity duration-500 px-4
+                      ${index === activeIndex ? 'opacity-100 z-10' : 'opacity-30 blur-[2px]'}`}
+                  >
                     <div className="bg-[#00151b] p-6 rounded-lg border border-[#4BF52A]/30 min-h-[240px] w-full flex flex-col justify-center">
                       <h2 className="text-2xl md:text-3xl font-bold text-[#4BF52A] mb-4 text-center">
                         {set.title}
@@ -94,15 +89,15 @@ const Hero: React.FC<HeroProps> = ({ scrollToVideo }) => {
                       <div className="mt-4 space-y-3">
                         {set.messages.map((message, msgIndex) => (
                           <p key={msgIndex} className="text-lg md:text-xl text-white/90 text-center">
-                            «{message}»
+                            {message}
                           </p>
                         ))}
                       </div>
                     </div>
-                  </CarouselItem>
+                  </div>
                 ))}
-              </CarouselContent>
-            </Carousel>
+              </div>
+            </div>
             
             {/* Carousel indicators styled like the example */}
             <div className="flex justify-center gap-4 mt-8">
