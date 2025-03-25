@@ -14,27 +14,21 @@ const VideoSection: React.FC<VideoSectionProps> = ({ videoRef, typeformUrl }) =>
   };
 
   return (
-    <section ref={videoRef} className="bg-[#001a20] section-padding" id="video-section">
+    <section ref={videoRef} className="bg-[#001a20] py-16 md:py-24" id="video-section">
       <div className="container">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-16 space-y-6">
-            <div className="bg-[#002129]/50 p-6 rounded-lg border border-[#4BF52A]/20 mb-4">
-              <p className="text-xl md:text-2xl text-white text-center">
-                ¿Tu ETT recibe montones de CV a diario? Nuestra herramienta detecta al instante quién miente y quién no.
-              </p>
-            </div>
+          <div className="mb-16 space-y-8">
+            <p className="text-xl md:text-2xl text-white text-center leading-relaxed">
+              ¿Tu ETT recibe montones de CV a diario? <span className="text-[#4BF52A] font-medium">Nuestra herramienta detecta al instante quién miente y quién no.</span>
+            </p>
             
-            <div className="bg-[#002129]/50 p-6 rounded-lg border border-[#4BF52A]/20 mb-4">
-              <p className="text-xl md:text-2xl text-white text-center">
-                Cuando un candidato inventa experiencia, el cliente lo sufre... y tu ETT paga las consecuencias.
-              </p>
-            </div>
+            <p className="text-xl md:text-2xl text-white text-center leading-relaxed">
+              Cuando un candidato inventa experiencia, el cliente lo sufre... <span className="text-[#4BF52A] font-medium">y tu ETT paga las consecuencias.</span>
+            </p>
             
-            <div className="bg-[#002129]/50 p-6 rounded-lg border border-[#4BF52A]/20">
-              <p className="text-xl md:text-2xl text-white text-center">
-                Cada candidato no apto que envías genera desconfianza. Con TheTruth, blindas tu reputación.
-              </p>
-            </div>
+            <p className="text-xl md:text-2xl text-white text-center leading-relaxed">
+              Cada candidato no apto que envías genera desconfianza. <span className="text-[#4BF52A] font-medium">Con TheTruth, blindas tu reputación.</span>
+            </p>
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#4BF52A]">
