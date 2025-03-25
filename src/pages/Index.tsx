@@ -6,6 +6,7 @@ import Benefits from '@/components/Benefits';
 import Testimonials from '@/components/Testimonials';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
+import FloatingCTA from '@/components/FloatingCTA';
 
 const Index = () => {
   // Replace this URL with your actual Typeform URL
@@ -21,9 +22,10 @@ const Index = () => {
   
   return (
     <div className="flex flex-col min-h-screen">
+      <FloatingCTA typeformUrl={typeformUrl} />
       <main className="flex-grow">
         <Hero scrollToVideo={scrollToVideo} />
-        <VideoSection videoRef={videoRef} />
+        <VideoSection videoRef={videoRef} typeformUrl={typeformUrl} />
         <Benefits />
         <Testimonials />
         <CallToAction typeformUrl={typeformUrl} />

@@ -1,30 +1,63 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { ExternalLink } from 'lucide-react';
 
 interface VideoSectionProps {
   videoRef: React.RefObject<HTMLDivElement>;
+  typeformUrl: string;
 }
 
-const VideoSection: React.FC<VideoSectionProps> = ({ videoRef }) => {
+const VideoSection: React.FC<VideoSectionProps> = ({ videoRef, typeformUrl }) => {
+  const openTypeform = () => {
+    window.open(typeformUrl, '_blank');
+  };
+
   return (
     <section ref={videoRef} className="bg-[#001a20] section-padding" id="video-section">
       <div className="container">
         <div className="max-w-4xl mx-auto">
+          <div className="mb-16 space-y-6">
+            <div className="bg-[#002129]/50 p-6 rounded-lg border border-[#4BF52A]/20 mb-4">
+              <p className="text-xl md:text-2xl text-white text-center">
+                ¿Tu ETT recibe montones de CV a diario? Nuestra herramienta detecta al instante quién miente y quién no.
+              </p>
+            </div>
+            
+            <div className="bg-[#002129]/50 p-6 rounded-lg border border-[#4BF52A]/20 mb-4">
+              <p className="text-xl md:text-2xl text-white text-center">
+                Cuando un candidato inventa experiencia, el cliente lo sufre... y tu ETT paga las consecuencias.
+              </p>
+            </div>
+            
+            <div className="bg-[#002129]/50 p-6 rounded-lg border border-[#4BF52A]/20">
+              <p className="text-xl md:text-2xl text-white text-center">
+                Cada candidato no apto que envías genera desconfianza. Con TheTruth, blindas tu reputación.
+              </p>
+            </div>
+          </div>
+          
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#4BF52A]">
-            SOLUCIÓN PARA CENTROS FORMATIVOS
+            No te la juegues con tu reputación: mira nuestro vídeo y blinda tus procesos.
           </h2>
-          <p className="text-lg text-white/80 text-center mb-12 max-w-3xl mx-auto">
-            Con The Truth, tus alumnos tendrán certificados digitales seguros e imposibles de falsificar, facilitando que las empresas confíen más rápido en ellos. Simplifica al máximo la gestión administrativa, mejora la reputación de tu centro, y consigue que tus estudiantes tengan más oportunidades laborales desde el primer día.
-          </p>
+          
           <div className="relative pb-[56.25%] h-0 rounded-lg overflow-hidden shadow-2xl">
             {/* Replace this with your actual video embed code */}
             <div className="absolute top-0 left-0 w-full h-full bg-[#001214] flex items-center justify-center text-white">
               <p className="text-xl">Tu VSL irá aquí - Reemplaza este contenedor con tu video</p>
             </div>
           </div>
-          <div className="mt-8 text-center text-[#4BF52A]/80">
-            <p className="text-lg font-medium">Este video exclusivo estará disponible por tiempo limitado</p>
+          
+          <div className="mt-10 text-center">
+            <Button 
+              onClick={openTypeform}
+              className="bg-[#4BF52A] hover:bg-[#3dd21e] text-[#002129] text-xl font-bold rounded-full py-6 px-10 flex items-center gap-3 mx-auto"
+            >
+              Reserva una Demo <ExternalLink className="w-6 h-6" />
+            </Button>
+            <p className="mt-4 text-lg font-medium text-[#4BF52A]/80">
+              Este video exclusivo estará disponible por tiempo limitado
+            </p>
           </div>
         </div>
       </div>
