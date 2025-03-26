@@ -14,10 +14,10 @@ const VideoSection: React.FC<VideoSectionProps> = ({ videoRef, typeformUrl }) =>
   };
 
   return (
-    <section ref={videoRef} className="bg-[#001a20] py-16 md:py-24" id="video-section">
+    <section ref={videoRef} className="bg-[#001a20] py-8 md:py-16 -mt-10" id="video-section">
       <div className="container">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#4BF52A]">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-[#4BF52A]">
             No te la juegues con tu reputación: mira nuestro vídeo y blinda tus procesos.
           </h2>
           
@@ -28,7 +28,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ videoRef, typeformUrl }) =>
             </div>
           </div>
           
-          <div className="mt-10 text-center">
+          <div className="mt-8 text-center">
             <Button 
               onClick={openTypeform}
               className="bg-[#4BF52A] hover:bg-[#3dd21e] text-[#002129] text-xl font-bold rounded-full py-6 px-10 flex items-center gap-3 mx-auto"
