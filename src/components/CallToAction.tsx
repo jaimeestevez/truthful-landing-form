@@ -17,10 +17,10 @@ const CallToAction: React.FC<CallToActionProps> = ({ typeformUrl }) => {
       <div className="container">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-[#4BF52A]">
-            Transforma Tu Centro Formativo
+            Revoluciona Tu ETT
           </h2>
           <p className="text-xl text-white/80">
-            Únete a las instituciones educativas que ya están revolucionando la forma de verificar y gestionar credenciales académicas
+            Únete a las empresas de trabajo temporal que ya están transformando la forma de verificar y gestionar credenciales, optimizando sus procesos y reduciendo riesgos de contratación.
           </p>
           <div className="flex flex-col items-center gap-4">
             <Button 

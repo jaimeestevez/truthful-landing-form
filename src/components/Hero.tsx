@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
 interface HeroProps {
@@ -38,15 +37,6 @@ const Hero: React.FC<HeroProps> = ({ scrollToVideo }) => {
                   <span className="text-[#4BF52A] font-medium">y tu ETT paga las consecuencias.</span>
                 </p>
               </div>
-            </div>
-            
-            <div className="flex justify-center">
-              <Button 
-                onClick={scrollToVideo}
-                className="bg-[#4BF52A] hover:bg-[#3dd21e] text-[#002129] text-lg md:text-xl border-0 rounded-full py-6 px-10 font-bold flex items-center gap-3 hover:gap-4 transition-all shadow-lg"
-              >
-                Ver solución <ArrowRight className="w-6 h-6" />
-              </Button>
             </div>
           </div>
         </div>
