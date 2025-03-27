@@ -31,7 +31,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ videoRef, typeformUrl }) =>
           <div className="mt-8 text-center">
             <Button 
               onClick={openTypeform}
-              className="bg-[#00C4AB] hover:bg-[#00a38d] text-[#002B30] text-xl font-bold rounded-full py-6 px-10 flex items-center gap-3 mx-auto"
+              className="bg-[#5EEC3E] hover:bg-[#4dd02f] text-[#002B30] text-xl font-bold rounded-full py-6 px-10 flex items-center gap-3 mx-auto"
             >
               Reserva una Demo <ExternalLink className="w-6 h-6" />
             </Button>
