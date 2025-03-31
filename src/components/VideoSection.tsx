@@ -14,7 +14,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ videoRef, typeformUrl }) =>
   };
 
   return (
-    <section ref={videoRef} className="bg-[#002B30] py-8 md:py-16 -mt-10" id="video-section">
+    <section ref={videoRef} className="bg-[#002B30] py-8 md:py-16" id="video-section">
       <div className="container">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-[#00C4AB]">
