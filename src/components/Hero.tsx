@@ -19,12 +19,12 @@ const Hero: React.FC<HeroProps> = ({
           <div className="max-w-3xl mx-auto space-y-6 pb-6 px-0">
             <p className="leading-snug text-center my-[11px] text-lg font-normal">
               <span className="font-semibold text-[#EDFFEE]">¿Tu ETT recibe montones de CV a diario?</span>{" "}
-              Nuestra herramienta detecta al instante <span className="text-[#5EEC3E] font-medium">quién miente y quién no.</span>
+              Nuestra herramienta detecta al instante <span className="text-[#5EEC3E] font-medium">quién miente</span>
             </p>
             
             <p className="text-lg leading-snug">
               <span className="font-semibold text-[#EDFFEE]">Cuando un candidato inventa experiencia, el cliente lo sufre...</span>{" "}
-              <span className="text-[#5EEC3E] font-medium">y tu ETT paga las consecuencias.</span>
+              <span className="text-[#5EEC3E] font-medium">y tu ETT paga las consecuencias</span>
             </p>
           </div>
           
